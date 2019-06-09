@@ -111,35 +111,27 @@ embeddings_b_3b: hand
 # ------------------------------------------------------------------
 
 # Question 1 (/1): Italian vs. Mexican sentiment
-ml_fairness_1_1: 0.0
+ml_fairness_1_1: 8.274483777
 
 # Question 2a (/1): Least biased
 # (This question is multiple choice.  Delete all but the correct answer(s)).
 ml_fairness_1_2a: 
  - ConceptNet Numberbatch
- - GloVe
- - Word2Vec
 
 # Question 2b (/1): Most biased
 # (This question is multiple choice.  Delete all but the correct answer(s)).
 ml_fairness_1_2b: 
- - ConceptNet Numberbatch
- - GloVe
  - Word2Vec
 
 # Question 3 (/1): What technique did the author apply?
 # (This question is multiple choice.  Delete all but the correct answer(s)).
 ml_fairness_1_3: 
  - Debiasing Word Embeddings
- - Bias Risk Reduction
- - Adversarial Training
 
 # Question 4 (/2): How significant is the model performance penalty for using debased vectors?
 # (This question is multiple choice.  Delete all but the correct answer(s)).
 ml_fairness_1_4: 
  - None
- - Very little
- - Significant
 
 
 # ------------------------------------------------------------------
@@ -160,18 +152,18 @@ ml_fairness_2_1:
 # (This question is multiple choice.  Delete all but the correct answer(s)).
 ml_fairness_3_1: 
  - The probability assigned to the positive class given a protected variable is true minus the probability assigned to the positive class given the protected variable is false
- - The difference in propensity of the model to make a correct judgement in either direction given a particular value of protected variable
+### - The difference in propensity of the model to make a correct judgement in either direction given a particular value of protected variable
 
 # Question 2 (/2): What is the equity gap?
 # (This question is multiple choice.  Delete all but the correct answer(s)).
 ml_fairness_3_2: 
- - The probability assigned to the positive class given a protected variable is true minus the probability assigned to the positive class given the protected variable is false
+### - The probability assigned to the positive class given a protected variable is true minus the probability assigned to the positive class given the protected variable is false
  - The difference in propensity of the model to make a correct judgement in either direction given a particular value of protected variable
 
 # Question 3 (/2): What is the intuition behind Jlambda?
 # (This question is multiple choice.  Delete all but the correct answer(s)).
 ml_fairness_3_3: 
- - A multiplier to ensure back propagation works where the final affine layer is reducing variance
+### - A multiplier to ensure back propagation works where the final affine layer is reducing variance
  - A negation of the gradient from a second head on the network that is trying to predict the protected variable such that the main network parameters make predictions worse on that head
 
 
@@ -190,37 +182,37 @@ ml_fairness_3_3:
 # Question 1 (/1): Why CNNs?
 # (This question is multiple choice.  Delete all but the correct answer(s)).
 cnn_1_1: 
- - Better word embeddings
+### - Better word embeddings
  - Capture local structure using a small number of parameters
- - Loss function better than cross-entropy
+### - Loss function better than cross-entropy
 
 # Question 2 (/1): What is pooling?
 # (This question is multiple choice.  Delete all but the correct answer(s)).
 cnn_1_2: 
  - A way to reduce the number of parameters of your network
- - A way to compress and reducing the resolution of a layer
+### - A way to compress and reducing the resolution of a layer
 
 # Question 3 (/1): Since pooling takes the max of a neighboring group of cells in a layer, how can this be differentiable?
 # (This question is multiple choice.  Delete all but the correct answer(s)).
 cnn_1_3: 
  - The partial derivative of the output of the pooling layer is zero with respect to all but the max cell whose partial derivative is 1.
- - It is not differentiable so we must use Thompson Sampling
+### - It is not differentiable so we must use Thompson Sampling
 
 # Question 4 (/2): If the previous layer had dimension 224x224x3 and the next has dimension 224x224x64, what is the most likely depth dimension of the filters you applied?
-cnn_1_4: 0
+cnn_1_4: 3
 
 # Question 5 (/2): If the previous layer had dimension 224x224x3 and the next has dimension 224x224x64, how many filters did you apply?
-cnn_1_5: 0
+cnn_1_5: 3
 
 # Question 6 (/2): If the previous layer had dimension 224x224x3 and the next has dimension 222x222x64, what might you consider adding?
 # (This question is multiple choice.  Delete all but the correct answer(s)).
 cnn_1_6: 
- - Stride
- - 4 additional convolutions
+## - Stride
+## - 4 additional convolutions
  - Padding
 
 # Question 7 (/2): If the previous layer had dimension 224x224x3 and the next has dimension 112x112x64, what stride did you use?
-cnn_1_7: 0
+cnn_1_7: 1
 
 
 
@@ -239,37 +231,37 @@ cnn_1_7: 0
 # (This question is multiple choice.  Delete all but the correct answer(s)).
 language_models_1_1: 
  - Translate between languages.
- - Score whether a sequence of tokens belongs to a language.
+### - Score whether a sequence of tokens belongs to a language.
  - Model sentiment of a sentence.
 
 # Question 2 (/1): If you don't have much training data, what might happen if you increase "n" of n-grams?
 # (This question is multiple choice.  Delete all but the correct answer(s)).
 language_models_1_2: 
- - Model performance will decrease despite increased sparsity
+### - Model performance will decrease despite increased sparsity
  - Model performance will improve despite increased sparsity
 
 # Question 3 (/1): If you have lots of training data, what might happen if you increase "n" of n-grams?
 # (This question is multiple choice.  Delete all but the correct answer(s)).
 language_models_1_3: 
  - Model performance will decrease despite increased sparsity
- - Model performance will improve despite increased sparsity
+### - Model performance will improve despite increased sparsity
 
 # Question 4 (/2): A reasonable technique to handle out-of-vocabulary words?
 # (This question is multiple choice.  Delete all but the correct answer(s)).
 language_models_1_4: 
- - Replacing digits with a special token
+### - Replacing digits with a special token
  - Replacing rare words in the training set with a special UNK token to get estimates for what contexts these tend to appear in
- - All of the above
+### - All of the above
 
 # Question 5 (/2): Smoothing is a technique to... (hint - remember P(next_word | context) must add up to 1 across all next_word-s.
 # (This question is multiple choice.  Delete all but the correct answer(s)).
 language_models_1_5: 
- - Handle sparsity issues even while increasing the amount of context considered
- - Take the probability distribution of words that appear in a context in the training set and flatten / smooth it by taking probability from very high probability words and spreading it across the rest of the vocabulary
+### - Handle sparsity issues even while increasing the amount of context considered
+### - Take the probability distribution of words that appear in a context in the training set and flatten / smooth it by taking probability from very high probability words and spreading it across the rest of the vocabulary
  - All of the above
 
 # Question 6 (/5): Let C[x, y, z] be the number of times the text "x y z" appeared in the corpus.  C[the cat] = 8000, C[the cat in] = 5000, C[the cat in the] = 1000 and C[the cat in the hat] = 800.  The size of your vocabulary is 10,000.  What is P(hat | the cat in the)?
-language_models_1_6: 0.0
+language_models_1_6: 0.8
 
 # Question 7 (/5): Let C[x, y, z] be the number of times the text "x y z" appeared in the corpus.  C[the cat] = 8000, C[the cat in] = 5000, C[the cat in the] = 1000 and C[the cat in the hat] = 800.  The size of your vocabulary is 10,000.  What is P(hat | the cat in the) if you use "AddK smoothing" with k=5?
 language_models_1_7: 0.0
