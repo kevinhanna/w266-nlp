@@ -223,17 +223,17 @@ cnn_1_7: 2
 language_models_1_1: 
  - Translate between languages.
 ### - Score whether a sequence of tokens belongs to a language.
-### - Model sentiment of a sentence.
+ - Model sentiment of a sentence.
 
 # Question 2 (/1): If you don't have much training data, what might happen if you increase "n" of n-grams?
 # (This question is multiple choice.  Delete all but the correct answer(s)).
 language_models_1_2: 
- - Model performance will improve despite increased sparsity
+ - Model performance will decrease despite increased sparsity
 
 # Question 3 (/1): If you have lots of training data, what might happen if you increase "n" of n-grams?
 # (This question is multiple choice.  Delete all but the correct answer(s)).
 language_models_1_3: 
- - Model performance will decrease despite increased sparsity
+ - Model performance will improve despite increased sparsity
 
 # Question 4 (/2): A reasonable technique to handle out-of-vocabulary words?
 # (This question is multiple choice.  Delete all but the correct answer(s)).
@@ -249,7 +249,7 @@ language_models_1_5:
 language_models_1_6: 0.8
 
 # Question 7 (/5): Let C[x, y, z] be the number of times the text "x y z" appeared in the corpus.  C[the cat] = 8000, C[the cat in] = 5000, C[the cat in the] = 1000 and C[the cat in the hat] = 800.  The size of your vocabulary is 10,000.  What is P(hat | the cat in the) if you use "AddK smoothing" with k=5?
-language_models_1_7: 0.0
+language_models_1_7: 0.073181818
 
 
 
@@ -271,7 +271,7 @@ tensorflow_1_1: 0
 tensorflow_1_2: 1
 
 # Question 3 (/5): How few layers can you get away with and still achieve the desired loss on the training set?
-tensorflow_1_3: 3
+tensorflow_1_3: 2
 
 # Question 4 (/5): How small is the biggest hidden layer is the smallest you can use in the body of the network and still achieve the desired loss on the training set?
-tensorflow_1_4: 0
+tensorflow_1_4: 3
