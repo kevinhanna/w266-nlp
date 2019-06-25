@@ -73,7 +73,7 @@ exploration_c_1:
  - A subphrase is negated.
 
 # Question 2.1 (/0): What patterns do you see?  (Ungraded.)
-exploration_c_2_1: your answer
+exploration_c_2_1: The 'interesting' sentences are those with a mean sentiment score near 0.5, this results in sentences which are mixed in sentiment, both nearly equal possitive and negative comments about the movie.
 
 # Question 2.2 (/1): What is often the relationship of polarity in these interesting sentences between a subphrase and the whole sentence?
 # (This question is multiple choice.  Delete all but the correct answer(s)).
@@ -127,7 +127,7 @@ convolutional_neural_networks_a_1_6: [128, 1]
 convolutional_neural_networks_a_1_7: [384, 1]
 
 # Question 2.1 (/3): What is the dimension of ck3?
-convolutional_neural_networks_a_2_1: [10, 1]
+convolutional_neural_networks_a_2_1: [10, 128]
 
 # Question 2.2 (/3): What is the dimension of chatk3?
 convolutional_neural_networks_a_2_2: [128, 1]
@@ -142,17 +142,17 @@ convolutional_neural_networks_a_3_2: 40
 convolutional_neural_networks_a_3_3: 50
 
 # Question 3.4 (/3): How many parameters are there in Wout?
-convolutional_neural_networks_a_3_4: 2695
+convolutional_neural_networks_a_3_4: 2688
 
 # Question 4 (/1): Compare kernels to feature engineering.
 # This question is a candidate for discussion in live session.
-convolutional_neural_networks_a_4: your answer
+convolutional_neural_networks_a_4: The convolution is creating n-grams and then optimizing for training performance.
 
 # Question 5.1 (/2): Would the two predictions be the same?
 convolutional_neural_networks_a_5_1: False
 
 # Question 5.2 (/0): Why or why not?
-convolutional_neural_networks_a_5_2: These words are close enough in proximity that the filters will see the change.  If 'bar' negates then the sentiment could be reversted.
+convolutional_neural_networks_a_5_2: These words are close enough in proximity that the filters will see the change.  If 'bar' negates then the sentiment could be reversed.
 
 
 # ------------------------------------------------------------------
@@ -165,13 +165,13 @@ convolutional_neural_networks_c_1:
  - random
 
 # Question 2 (/0): Describe what you found.
-convolutional_neural_networks_c_2: your answer
+convolutional_neural_networks_c_2: A dropout of .9  and small kernel sizes scored best.  Though it seems changing any parameter can effect all the other paramters.
 
 # Question 3 (/0): Did you find they were the same?  Different?  (Are you overfitting the dev set?)
-convolutional_neural_networks_c_3: your answer
+convolutional_neural_networks_c_3: The dev and test set scored quite similarly in the ~0.70-0.78 range, however only one of the top 3 scored from dev would have been the top 3 score using test.  The dev set scored much higher than the dev and test sets, there appears to be some overtraining. 
 
 # Question 4 (/5): What was the best accuracy you achieved on the test set?  (As long as you show evidence of exploring, you'll get full points.)
-convolutional_neural_networks_c_4: 0.7775229
+convolutional_neural_networks_c_4: 0.78211
 
 
 
@@ -194,10 +194,10 @@ window_and_recurrent_models_a_1:
 # Question 2 (/5): What is the computational complexity of the final affine and softmax (over V classes) with hidden layer of dimension h?  Hint. a matrix multiplication of m x n by n x o is O(mno).  Assume each other mathematical operation is O(1).
 # (This question is multiple choice.  Delete all but the correct answer(s)).
 window_and_recurrent_models_a_2: 
- - O(hV)
+# - O(hV)
  - O(hV^2)
- - O(V)
- - Something else
+# - O(V)
+# - Something else
 
 # Question 3 (/1): In the RNN/LSTM slides (https://docs.google.com/presentation/d/11mkYXoPovKeT9w56Ddl9sS8gBwzoZrEdmszB4o83aYc/edit#slide=id.g5ad7553b58_7_240), when two wires merge in the diagrams, what does that mean?
 # (This question is multiple choice.  Delete all but the correct answer(s)).
