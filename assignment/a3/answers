@@ -115,22 +115,22 @@ convolutional_neural_networks_a_1_2: [7, 128]
 convolutional_neural_networks_a_1_3: [6, 128]
 
 # Question 1.4 (/2): What is the dimension of chatk3?
-convolutional_neural_networks_a_1_4: [128, 1]
+convolutional_neural_networks_a_1_4: [1, 128]
 
 # Question 1.5 (/3): What is the dimension of chatk4?
-convolutional_neural_networks_a_1_5: [128, 1]
+convolutional_neural_networks_a_1_5: [1, 128]
 
 # Question 1.6 (/3): What is the dimension of chatk5?
-convolutional_neural_networks_a_1_6: [128, 1]
+convolutional_neural_networks_a_1_6: [1, 128]
 
 # Question 1.7 (/3): What is the dimension of Chat?
-convolutional_neural_networks_a_1_7: [384, 1]
+convolutional_neural_networks_a_1_7: [1, 384]
 
 # Question 2.1 (/3): What is the dimension of ck3?
 convolutional_neural_networks_a_2_1: [10, 128]
 
 # Question 2.2 (/3): What is the dimension of chatk3?
-convolutional_neural_networks_a_2_2: [128, 1]
+convolutional_neural_networks_a_2_2: [1, 128]
 
 # Question 3.1 (/3): How many parameters are there in Wfilter=3?
 convolutional_neural_networks_a_3_1: 30
@@ -165,10 +165,10 @@ convolutional_neural_networks_c_1:
  - random
 
 # Question 2 (/0): Describe what you found.
-convolutional_neural_networks_c_2: A dropout of .9  and small kernel sizes scored best.  Though it seems changing any parameter can effect all the other paramters.
+convolutional_neural_networks_c_2: A dropout of .9  and small kernel sizes scored best.  Though it seems changing any parameter can effect all the other paramters.  Having additional dense layers improved the accuracy, however, only to a certain limit, 10 or 400 dense layers seemed to perform equally well. 
 
 # Question 3 (/0): Did you find they were the same?  Different?  (Are you overfitting the dev set?)
-convolutional_neural_networks_c_3: The dev and test set scored quite similarly in the ~0.70-0.78 range, however only one of the top 3 scored from dev would have been the top 3 score using test.  The dev set scored much higher than the dev and test sets, there appears to be some overtraining. 
+convolutional_neural_networks_c_3: The dev and test set scored quite similarly in the ~0.70-0.78 range, however only one of the top 3 scored from dev would have been the top 3 score using test.  The train set scored much higher than the dev and test sets, the model is overtrained on dev, even with high dropout. 
 
 # Question 4 (/5): What was the best accuracy you achieved on the test set?  (As long as you show evidence of exploring, you'll get full points.)
 convolutional_neural_networks_c_4: 0.78211
@@ -194,10 +194,7 @@ window_and_recurrent_models_a_1:
 # Question 2 (/5): What is the computational complexity of the final affine and softmax (over V classes) with hidden layer of dimension h?  Hint. a matrix multiplication of m x n by n x o is O(mno).  Assume each other mathematical operation is O(1).
 # (This question is multiple choice.  Delete all but the correct answer(s)).
 window_and_recurrent_models_a_2: 
-# - O(hV)
- - O(hV^2)
-# - O(V)
-# - Something else
+ - O(hV)
 
 # Question 3 (/1): In the RNN/LSTM slides (https://docs.google.com/presentation/d/11mkYXoPovKeT9w56Ddl9sS8gBwzoZrEdmszB4o83aYc/edit#slide=id.g5ad7553b58_7_240), when two wires merge in the diagrams, what does that mean?
 # (This question is multiple choice.  Delete all but the correct answer(s)).
