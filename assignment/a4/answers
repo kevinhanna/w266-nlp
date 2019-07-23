@@ -55,7 +55,7 @@ machine_translation_a_6:
 # ------------------------------------------------------------------
 
 # Question 1 (/1): In Sequence to Sequence Learning with Neural Networks 2014, how much additional BLEU score did they achieve by reversing the input sentence?
-machine_translation_b_1: 1.51
+machine_translation_b_1: 4.7
 
 # Question 2 (/1): The authors of the paper believe reversing input to the encoder helps to...
 # (This question is multiple choice.  Delete all but the correct answer(s)).
